@@ -19,3 +19,67 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  color: white;
+}
+.gradient-bg {
+  background: linear-gradient(to bottom, #ffe4c4, #ffffff, #ffedd5);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000000;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.animate-gradient {
+  animation: gradientAnimation 80s ease-in-out infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.glow-icon {
+  color: white;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.8));
+}
+@layer utilities {
+  .waves {
+    animation: waves 1.5s linear infinite;
+  }
+
+  @keyframes waves {
+    0% {
+      transform: translateY(-170px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+}
+
