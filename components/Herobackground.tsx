@@ -14,12 +14,15 @@ const Hero = () => {
     animate: { y: 0, opacity: 1 },
     transition: { duration: 1.5, ease: 'easeInOut' },
   };
-
   const funnyAnimation = {
     hover: {
       scale: [1, 1.1, 1],
       rotate: [0, 10, -10, 0],
-      transition: { duration: 1, repeat: Infinity, repeatType: 'loop' },
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+        repeatType: 'loop' as 'loop',  // Correcting this to 'loop'
+      },
     },
   };
 
@@ -46,7 +49,7 @@ const Hero = () => {
             '--fade-stop': '90%',
             '--offset': '150px',
             '--color-dark': 'rgba(255, 255, 255, 0.5)',
-          }}
+          } as React.CSSProperties} // Explicitly cast to `React.CSSProperties`
           whileHover="hover"
           variants={funnyAnimation}
         ></motion.div>
@@ -69,7 +72,7 @@ const Hero = () => {
             '--fade-stop': '90%',
             '--offset': '150px',
             '--color-dark': 'rgba(255, 255, 255, 0.5)',
-          }}
+          } as React.CSSProperties} // Explicitly cast to `React.CSSProperties`
           whileHover="hover"
           variants={funnyAnimation}
         ></motion.div>

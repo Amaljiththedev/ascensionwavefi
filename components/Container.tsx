@@ -3,10 +3,8 @@ import React, { useRef } from "react";
 import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
 
 export const ContainerScroll = ({
-  titleComponent,
   children,
 }: {
-  titleComponent: string | React.ReactNode;
   children: React.ReactNode;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -48,7 +46,7 @@ export const ContainerScroll = ({
           perspective: "1000px",
         }}
       >
-        <Header translate={translate} titleComponent={titleComponent} />
+        <Header translate={translate} />
         <Card rotate={rotate} translate={translate} scale={scale}>
           {children}
         </Card>
@@ -57,7 +55,7 @@ export const ContainerScroll = ({
   );
 };
 
-export const Header = ({ translate, titleComponent }: any) => {
+export const Header = ({ translate }: any) => {
   return (
     <motion.div
       style={{
@@ -65,7 +63,6 @@ export const Header = ({ translate, titleComponent }: any) => {
       }}
       className="div max-w-5xl mx-auto text-center"
     >
-      {titleComponent}
     </motion.div>
   );
 };

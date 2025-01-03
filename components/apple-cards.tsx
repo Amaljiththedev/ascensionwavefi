@@ -6,6 +6,7 @@ import React, {
   createContext,
   useContext,
   JSX,
+  RefObject,
 } from "react";
 import {
   IconArrowNarrowLeft,
@@ -22,11 +23,12 @@ interface CarouselProps {
 }
 
 type Card = {
-  src: string;
-  title: string;
   category: string;
-  content: React.ReactNode;
+  title: string;
+  src: React.JSX.Element;  // src is now a JSX element (e.g., an icon)
+  content: React.JSX.Element;
 };
+
 
 export const CarouselContext = createContext<{
   onCardClose: (index: number) => void;
@@ -163,7 +165,7 @@ export const Card = ({
   layout?: boolean;
 }) => {
   const [open, setOpen] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const { onCardClose, currentIndex } = useContext(CarouselContext);
 
   useEffect(() => {
@@ -183,7 +185,8 @@ export const Card = ({
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  useOutsideClick(containerRef, () => handleClose());
+  useOutsideClick(containerRef as RefObject<HTMLDivElement>, () => handleClose());
+
 
   const handleOpen = () => {
     setOpen(true);

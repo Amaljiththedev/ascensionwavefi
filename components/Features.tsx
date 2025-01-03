@@ -123,10 +123,10 @@ export function GridPattern({ width, height, x, y, squares, ...props }: any) {
       />
       {squares && (
         <svg x={x} y={y} className="overflow-visible">
-          {squares.map(([sx, sy], index) => (
+          {squares.map(([sx, sy]: any, index: any) => (
             <rect
               strokeWidth="0"
-              key={`${sx}-${sy}-${index}`} // Unique key by combining x, y, and index
+              key={`${sx}-${sy}-${index}`} // Unique key by combining sx, sy, and index
               width={width + 1}
               height={height + 1}
               x={sx * width}

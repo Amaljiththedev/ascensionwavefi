@@ -142,20 +142,21 @@ function LogoCarousel({ columnCount = 2 }: { columnCount?: number }) {
   // Memoize the array of logos to prevent unnecessary re-renders
   const allLogos: Logo[] = useMemo(
     () => [
-      { name: "JavaScript", id: 1, img: (props: SVGProps<SVGSVGElement>) => <IconBrandJavascript {...props} color="#F7DF1E" /> }, // JS fill color
-      { name: "Redux", id: 2, img: (props: SVGProps<SVGSVGElement>) => <IconBrandRedux {...props} color="#764ABC" /> }, // Redux fill color
-      { name: "React", id: 3, img: (props: SVGProps<SVGSVGElement>) => <IconBrandReact {...props} color="#61DAFB" /> }, // React fill color
-      { name: "HTML", id: 4, img: (props: SVGProps<SVGSVGElement>) => <IconBrandHtml5 {...props} color="#E34F26" /> }, // HTML fill color
-      { name: "CSS", id: 5, img: (props: SVGProps<SVGSVGElement>) => <IconBrandCss3 {...props} color="#1572B6" /> }, // CSS fill color
-      { name: "TypeScript", id: 6, img: (props: SVGProps<SVGSVGElement>) => <IconBrandTypescript {...props} color="#3178C6" /> }, // TypeScript fill color
-      { name: "Node.js", id: 7, img: (props: SVGProps<SVGSVGElement>) => <IconBrandNodejs {...props} color="#68A063" /> }, // Node.js fill color
-      { name: "Python", id: 8, img: (props: SVGProps<SVGSVGElement>) => <IconBrandPython {...props} color="#306998" /> }, // Python fill color
-      { name: "Git", id: 10, img: (props: SVGProps<SVGSVGElement>) => <IconBrandGit {...props} color="#F05032" /> }, // Git fill color
-      { name: "Docker", id: 11, img: (props: SVGProps<SVGSVGElement>) => <IconBrandDocker {...props} color="#2496ED" /> }, // Docker fill color
-      { name: "GraphQL", id: 13, img: (props: SVGProps<SVGSVGElement>) => <IconBrandGraphql {...props} color="#E10098" /> }, // GraphQL fill color
-      { name: "AWS", id: 14, img: (props: SVGProps<SVGSVGElement>) => <IconBrandAws {...props} color="#FF9900" /> }, // AWS fill color
-      { name: "VSCode", id: 15, img: (props: SVGProps<SVGSVGElement>) => <IconBrandVscode {...props} color="#0066B8" /> }, // VSCode fill color
-      { name: "Tailwind", id: 16, img: (props: SVGProps<SVGSVGElement>) => <IconBrandTailwind {...props} color="#38BDF8" /> }, // Tailwind fill color
+      { name: "JavaScript", id: 1, img: () => <IconBrandJavascript color="#F7DF1E" className="w-24 h-24" /> }, // JS fill color
+{ name: "Redux", id: 2, img: () => <IconBrandRedux color="#764ABC" className="w-24 h-24" /> }, // Redux fill color
+{ name: "React", id: 3, img: () => <IconBrandReact color="#61DAFB" className="w-24 h-24" /> }, // React fill color
+{ name: "HTML", id: 4, img: () => <IconBrandHtml5 color="#E34F26" className="w-24 h-24" /> }, // HTML fill color
+{ name: "CSS", id: 5, img: () => <IconBrandCss3 color="#1572B6" className="w-24 h-24" /> }, // CSS fill color
+{ name: "TypeScript", id: 6, img: () => <IconBrandTypescript color="#3178C6" className="w-24 h-24" /> }, // TypeScript fill color
+{ name: "Node.js", id: 7, img: () => <IconBrandNodejs color="#68A063" className="w-24 h-24" /> }, // Node.js fill color
+{ name: "Python", id: 8, img: () => <IconBrandPython color="#306998" className="w-24 h-24" /> }, // Python fill color
+{ name: "Git", id: 10, img: () => <IconBrandGit color="#F05032" className="w-24 h-24" /> }, // Git fill color
+{ name: "Docker", id: 11, img: () => <IconBrandDocker color="#2496ED" className="w-24 h-24" /> }, // Docker fill color
+{ name: "GraphQL", id: 13, img: () => <IconBrandGraphql color="#E10098" className="w-24 h-24" /> }, // GraphQL fill color
+{ name: "AWS", id: 14, img: () => <IconBrandAws color="#FF9900" className="w-24 h-24" /> }, // AWS fill color
+{ name: "VSCode", id: 15, img: () => <IconBrandVscode color="#0066B8" className="w-24 h-24" /> }, // VSCode fill color
+{ name: "Tailwind", id: 16, img: () => <IconBrandTailwind color="#38BDF8" className="w-24 h-24" /> }, // Tailwind fill color
+
     ],
     []
   );

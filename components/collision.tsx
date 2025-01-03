@@ -10,8 +10,8 @@ export const BackgroundBeamsWithCollision = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const parentRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null); // Allow null here
+  const parentRef = useRef<HTMLDivElement | null>(null); // Allow null here
 
   const beams = [
     {
@@ -68,7 +68,7 @@ export const BackgroundBeamsWithCollision = ({
 
   return (
     <div
-      ref={parentRef}
+      ref={parentRef} // parentRef allows null
       className={cn(
         "h-96 md:h-[40rem] bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden",
         // h-screen if you want bigger
@@ -86,7 +86,7 @@ export const BackgroundBeamsWithCollision = ({
 
       {children}
       <div
-        ref={containerRef}
+        ref={containerRef} // containerRef allows null
         className="absolute bottom-0 bg-neutral-100 w-full inset-x-0 pointer-events-none"
         style={{
           boxShadow:
@@ -100,8 +100,8 @@ export const BackgroundBeamsWithCollision = ({
 const CollisionMechanism = React.forwardRef<
   HTMLDivElement,
   {
-    containerRef: React.RefObject<HTMLDivElement>;
-    parentRef: React.RefObject<HTMLDivElement>;
+    containerRef: React.RefObject<HTMLDivElement | null>; // Allow null
+    parentRef: React.RefObject<HTMLDivElement | null>; // Allow null
     beamOptions?: {
       initialX?: number;
       translateX?: number;
@@ -115,7 +115,7 @@ const CollisionMechanism = React.forwardRef<
     };
   }
 >(({ parentRef, containerRef, beamOptions = {} }, ref) => {
-  const beamRef = useRef<HTMLDivElement>(null);
+  const beamRef = useRef<HTMLDivElement | null>(null); // Allow null here
   const [collision, setCollision] = useState<{
     detected: boolean;
     coordinates: { x: number; y: number } | null;
@@ -177,7 +177,7 @@ const CollisionMechanism = React.forwardRef<
     <>
       <motion.div
         key={beamKey}
-        ref={beamRef}
+        ref={beamRef} // beamRef allows null
         animate="animate"
         initial={{
           translateY: beamOptions.initialY || "-200px",
