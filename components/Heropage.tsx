@@ -28,23 +28,27 @@ const Heropage: React.FC = () => {
           </p>
 
           {/* Action Button */}
-          <button className="inline-flex items-center justify-center rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background h-12 py-3 px-6 bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200 group transform hover:scale-105 transition-transform duration-200 z-30 relative">
-            <span className="flex items-center space-x-2">
-              <span>Start Your Project</span>
-              <span className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white dark:bg-slate-900 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-white dark:bg-slate-900"></span>
-              </span>
-            </span>
-          </button>
+
+          <button
+  className="inline-flex items-center justify-center rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background h-12 py-3 px-6 bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200 group transform hover:scale-105 transition-transform duration-200 z-30 relative"
+  onClick={() => {
+    document.getElementById("contact-section")?.scrollIntoView({ behavior: "smooth" });
+  }}
+>
+  <span className="flex items-center space-x-2">
+    <span>Start Your Project</span>
+    <span className="relative flex h-3 w-3">
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white dark:bg-slate-900 opacity-75"></span>
+      <span className="relative inline-flex rounded-full h-3 w-3 bg-white dark:bg-slate-900"></span>
+    </span>
+  </span>
+</button>
+
         </div>
       </div>
 
       {/* Scrollable Container */}
-      <div className="relative -mt-96 z-10 pointer-events-none">
-        {/* Ensure that pointer events are properly configured */}
-        <HeroScrollDemo />
-      </div>
+
     </>
   );
 };

@@ -11,6 +11,7 @@ import Heropage from "@/components/Heropage";
 import { LogoCarouselDemo } from "@/components/Logo";
 import Navbar from "@/components/Navbar";
 import { WorldMapDemo } from "@/components/worldmapdemo";
+import { HeroScrollDemo } from "@/components/Containerscrollanimation";
 
 const scrollVariant = {
   hidden: { opacity: 0, y: 50 }, // Start slightly below with opacity 0
@@ -30,6 +31,10 @@ export default function Home() {
         {/* Hero Section */}
         <section aria-labelledby="hero-section" className="overflow-hidden w-full">
           <Heropage />
+          <div className="relative -mt-60 z-10 pointer-events-none">
+        {/* Ensure that pointer events are properly configured */}
+        <HeroScrollDemo />
+      </div>
         </section>
 
         {/* Features Section */}
