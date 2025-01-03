@@ -36,11 +36,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Head /> {/* Ensure the Head component is included here */}
-        {isLoading ? (
-          <div className="w-full h-screen flex items-center justify-center bg-black absolute top-0 left-0 z-50">
-            <Seo /> {/* Center the loader */}
-          </div>
-        ) : (
+
+        )  ( 
           <motion.div
             initial={{ opacity: 0 }} // Start with 0 opacity
             animate={{ opacity: 1 }}  // Fade in with full opacity
@@ -48,7 +45,7 @@ export default function RootLayout({
           >
             {children} {/* Children fade in after loader */}
           </motion.div>
-        )}
+        )
       </body>
     </html>
   );
