@@ -6,7 +6,7 @@ import { HeroScrollDemo } from "./Containerscrollanimation";  // Ensure this is 
 const Heropage: React.FC = () => {
   return (
     <>
-      <div className="relative overflow-hidden h-screen w-full">
+      <div className="relative overflow-hidden h-screen w-full mt-10">
         <Hero /> {/* Hero background component */}
         
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center px-4">
@@ -53,7 +53,7 @@ const Heropage: React.FC = () => {
       </div>
 
       {/* Adjusting the margin-top to make HeroScrollDemo closer */}
-      <div className="-mt-96 -z-10">
+      <div className="-mt-96 -z-10 style={{ zIndex: -1 }">
         <HeroScrollDemo /> {/* Scrollable demo component */}
       </div>
     </>
