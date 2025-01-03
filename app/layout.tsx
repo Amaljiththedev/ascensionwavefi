@@ -36,8 +36,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Head /> {/* Ensure the Head component is included here */}
-
-        )  ( 
           <motion.div
             initial={{ opacity: 0 }} // Start with 0 opacity
             animate={{ opacity: 1 }}  // Fade in with full opacity
@@ -45,7 +43,7 @@ export default function RootLayout({
           >
             {children} {/* Children fade in after loader */}
           </motion.div>
-        )
+        
       </body>
     </html>
   );
