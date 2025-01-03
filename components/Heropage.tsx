@@ -1,16 +1,18 @@
 import React from "react";
-import Hero from "./Herobackground";  // Ensure this component is properly exported
-import { HeroScrollDemo } from "./Containerscrollanimation";  // Ensure this is properly exported
+import Hero from "./Herobackground"; // Ensure this component is properly exported
+import { HeroScrollDemo } from "./Containerscrollanimation"; // Ensure this is properly exported
 
-// Define the functional component `Heropage` with correct types
+// Define the functional component `Heropage`
 const Heropage: React.FC = () => {
   return (
     <>
+      {/* Hero Section */}
       <div className="relative overflow-hidden h-screen w-full">
         <Hero /> {/* Hero background component */}
-        
-        <div className="mt-10 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center px-4 z-20">
-          {/* Main title */}
+
+        {/* Hero Content */}
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center px-4 z-20">
+          {/* Main Title */}
           <h1 className="relative z-50 mx-auto mb-6 max-w-4xl text-center text-4xl sm:text-6xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-gray-700 dark:text-neutral-300">
             Empowering Your Digital Vision.
             <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
@@ -20,13 +22,13 @@ const Heropage: React.FC = () => {
             </div>
           </h1>
 
-          {/* Description text */}
+          {/* Description */}
           <p className="text-base text-white dark:text-white mt-4 mb-8 max-w-3xl mx-auto sm:text-sm md:text-base leading-relaxed px-4 sm:px-8">
             Building your brand with precision, speed, and no compromises.
           </p>
 
           {/* Action Button */}
-          <button className="inline-flex items-center justify-center rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background h-12 py-3 px-6 bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200 group transform hover:scale-105 transition-transform duration-200 z-30">
+          <button className="inline-flex items-center justify-center rounded-md text-sm font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background h-12 py-3 px-6 bg-slate-900 text-white hover:bg-slate-800 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-200 group transform hover:scale-105 transition-transform duration-200 z-30 relative">
             <span className="flex items-center space-x-2">
               <span>Start Your Project</span>
               <span className="relative flex h-3 w-3">
@@ -38,9 +40,10 @@ const Heropage: React.FC = () => {
         </div>
       </div>
 
-      {/* Adjusting the margin-top to make HeroScrollDemo closer */}
-      <div className="-mt-96 -z-10 pointer-events-auto">
-        <HeroScrollDemo /> {/* Scrollable demo component */}
+      {/* Scrollable Container */}
+      <div className="relative -mt-96 z-10 pointer-events-none">
+        {/* Ensure that pointer events are properly configured */}
+        <HeroScrollDemo />
       </div>
     </>
   );

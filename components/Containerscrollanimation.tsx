@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function HeroScrollDemo() {
   return (
-    <div className="flex flex-col overflow-hidden -mt-96">
+    <div className="flex flex-col overflow-hidden -mt-96 pointer-events-auto z-10">
       <ContainerScroll>
         <div className="relative w-full h-full">
           {/* Desktop Image */}
