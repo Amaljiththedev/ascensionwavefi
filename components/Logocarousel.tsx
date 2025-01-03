@@ -160,7 +160,7 @@ function LogoCarousel({ columnCount = 2 }: { columnCount?: number }) {
 
     ],
     []
-  );
+  );//hiii
 
   // Distribute logos across columns when the component mounts
   useEffect(() => {
