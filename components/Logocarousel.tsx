@@ -143,23 +143,20 @@ function LogoCarousel({ columnCount = 2 }: { columnCount?: number }) {
   const allLogos: Logo[] = useMemo(
     () => [
 
-      [
-        { name: "JavaScript", id: 1, img: () => <IconBrandJavascript color="#F7DF1E" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "Redux", id: 2, img: () => <IconBrandRedux color="#764ABC" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "React", id: 3, img: () => <IconBrandReact color="#61DAFB" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "HTML", id: 4, img: () => <IconBrandHtml5 color="#E34F26" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "CSS", id: 5, img: () => <IconBrandCss3 color="#1572B6" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "TypeScript", id: 6, img: () => <IconBrandTypescript color="#3178C6" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "Node.js", id: 7, img: () => <IconBrandNodejs color="#68A063" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "Python", id: 8, img: () => <IconBrandPython color="#306998" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "Git", id: 10, img: () => <IconBrandGit color="#F05032" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "Docker", id: 11, img: () => <IconBrandDocker color="#2496ED" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "GraphQL", id: 13, img: () => <IconBrandGraphql color="#E10098" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "AWS", id: 14, img: () => <IconBrandAws color="#FF9900" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "VSCode", id: 15, img: () => <IconBrandVscode color="#0066B8" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
-        { name: "Tailwind", id: 16, img: () => <IconBrandTailwind color="#38BDF8" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> }
-      ]
-      
+      { name: "JavaScript", id: 1, img: () => <IconBrandJavascript color="#F7DF1E" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "Redux", id: 2, img: () => <IconBrandRedux color="#764ABC" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "React", id: 3, img: () => <IconBrandReact color="#61DAFB" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "HTML", id: 4, img: () => <IconBrandHtml5 color="#E34F26" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "CSS", id: 5, img: () => <IconBrandCss3 color="#1572B6" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "TypeScript", id: 6, img: () => <IconBrandTypescript color="#3178C6" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "Node.js", id: 7, img: () => <IconBrandNodejs color="#68A063" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "Python", id: 8, img: () => <IconBrandPython color="#306998" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "Git", id: 10, img: () => <IconBrandGit color="#F05032" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "Docker", id: 11, img: () => <IconBrandDocker color="#2496ED" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "GraphQL", id: 13, img: () => <IconBrandGraphql color="#E10098" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "AWS", id: 14, img: () => <IconBrandAws color="#FF9900" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "VSCode", id: 15, img: () => <IconBrandVscode color="#0066B8" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> },
+  { name: "Tailwind", id: 16, img: () => <IconBrandTailwind color="#38BDF8" className="w-24 h-24 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-28 lg:h-28" /> }
 
     ],
     []
