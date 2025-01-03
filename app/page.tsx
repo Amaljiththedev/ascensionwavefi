@@ -19,7 +19,7 @@ const scrollVariant = {
 
 export default function Home() {
   return (
-    <div className="bg-gradient-to-r from-black via-black to-red-950 text-white animate-gradient bg-[length:200%_200%]">
+    <div className="bg-gradient-to-r from-black via-black to-black text-white animate-gradient bg-[length:200%_200%]">
       {/* Header with Navbar */}
       <header className="sticky top-0 z-50 w-full overflow-hidden">
         <Navbar />
