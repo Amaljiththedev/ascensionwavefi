@@ -89,7 +89,7 @@ export default function Home() {
 
         <motion.section
           aria-labelledby="logo-carousel"
-          className="-mt-10 mb-20 overflow-hidden w-full px-4"
+          className="mt-10 mb-30 overflow-hidden w-full px-4"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
